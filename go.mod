@@ -1,4 +1,4 @@
-module github.com/go-projects/sessy
+module github.com/a-kumar5/sessy
 
 go 1.22.2
 

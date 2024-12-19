@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/go-projects/sessy/utils"
+	"github.com/a-kumar5/sessy/utils"
 	"github.com/urfave/cli/v3"
 )
 
