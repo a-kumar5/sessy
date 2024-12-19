@@ -28,6 +28,23 @@ func main() {
 					return nil
 				},
 			},
+			{
+				Name:    "yaml",
+				Aliases: []string{"yl"},
+				Usage:   "create a yaml/yml file if name given it will create with that name or else default",
+				Action: func(ctx context.Context, cmd *cli.Command) error {
+					fileName := "default"
+					if cmd.NArg() > 0 {
+						fileName = cmd.Args().Get(0)
+					}
+					_, err := utils.CreateYaml(fileName)
+					if err != nil {
+						return err
+					}
+					fmt.Printf("%s.yml file created\n", fileName)
+					return nil
+				},
+			},
 		},
 	}
 

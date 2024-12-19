@@ -24,3 +24,17 @@ The `list` (or `ls`) command is used to display a list of files managed by Sessy
 #### **Usage**
 ```bash
 sessy list
+
+# **Create a YAML File**
+
+### **Usage**
+
+```bash
+# Create a YAML file with a custom name
+sessy yaml my-config
+
+# Or use the alias
+sessy yl my-config
+
+# Create a default YAML file
+sessy yaml
