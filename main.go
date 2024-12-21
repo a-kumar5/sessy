@@ -24,7 +24,7 @@ func main() {
 					if err != nil {
 						return err
 					}
-					fmt.Printf(string(output))
+					fmt.Println(string(output))
 					return nil
 				},
 			},
@@ -37,7 +37,7 @@ func main() {
 					if cmd.NArg() > 0 {
 						fileName = cmd.Args().Get(0)
 					}
-					_, err := utils.CreateYaml(fileName)
+					err := utils.CreateYaml(fileName)
 					if err != nil {
 						return err
 					}

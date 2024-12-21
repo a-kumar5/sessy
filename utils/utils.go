@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"os"
 	"os/exec"
 )
 
@@ -12,12 +13,11 @@ func ListFiles() ([]byte, error) {
 	return output, nil
 }
 
-func CreateYaml(fileName string) ([]byte, error) {
+func CreateYaml(fileName string) error {
 	fn := fileName + ".yml"
-	cmd := exec.Command("touch", fn)
-	output, err := cmd.Output()
+	err := os.WriteFile(fn, []byte{}, 0755)
 	if err != nil {
-		return []byte{}, err
+		return err
 	}
-	return output, nil
+	return nil
 }
